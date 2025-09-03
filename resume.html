@@ -6,6 +6,17 @@
   <title>Resume - Uriel Ambrosio</title>
   <link rel="stylesheet" href="style.css">
 </head>
+  
+<script>
+  const experiences = document.querySelectorAll('.experience h3');
+
+  experiences.forEach(job => {
+    job.addEventListener('click', () => {
+      job.parentElement.classList.toggle('active');
+    });
+  });
+</script>
+
 <body>
 
 <header>
@@ -25,13 +36,13 @@
   <div class="experience">
     <h3>Chasers Laser Tag – Management</h3>
     <p><em>October 2020 - Present | Naperville, Illinois, United States</em></p>
-    <p>Major duties include: Team Management, Arcade Machine Repairs, Laser Tag Equipment Repair, and R&D of Laser Tag/Arcade Accessories.</p>
+    <p class="details">Major duties include: Team Management, Arcade Machine Repairs, Laser Tag Equipment Repair, and R&D of Laser Tag/Arcade Accessories.</p>
   </div>
 
   <div class="experience">
     <h3>SMT GROUP LLC – Project Engineer</h3>
     <p><em>August 2021 - January 2024 | Naperville, Illinois, United States</em></p>
-    <p>
+    <p class="details">
       Manufacturing Process Engineer | Process Optimization | Quality Assurance | Cost Analysis.
       Experienced in optimizing manufacturing processes to enhance efficiency, reduce costs, and ensure high product quality. Expertise in process design, development, and continuous improvement using Six Sigma and Lean Manufacturing. Collaborative team player with excellent communication skills.
     </p>
@@ -40,11 +51,13 @@
   <div class="experience">
     <h3>Mold Tooling Technician</h3>
     <p><em>February 2019 - July 2021 | Naperville, Illinois</em></p>
+    <p class="details">Handled mold tooling, machine setup, and maintenance tasks.</p>
   </div>
 
   <div class="experience">
     <h3>Dunkin Donuts – Shift Supervisor</h3>
     <p><em>June 2018 - July 2023 | Naperville, Illinois</em></p>
+    <p class="details">Managed shift operations, staff scheduling, and customer satisfaction.</p>
   </div>
 
   <div class="experience">
@@ -69,4 +82,5 @@
 
 </body>
 </html>
+
 
