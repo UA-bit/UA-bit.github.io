@@ -1,5 +1,4 @@
-/* style.css - shared across all pages */
-
+/* Base styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -9,8 +8,8 @@ body {
 }
 
 header {
-  padding: 40px;
-  background: #222;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #4CAF50, #2E7D32); /* Gradient header */
   color: white;
 }
 
@@ -18,8 +17,13 @@ header {
   width: 180px;
   height: 180px;
   border-radius: 50%;
-  border: 5px solid #4CAF50;
+  border: 5px solid white; /* lighter circle border */
   object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05); /* subtle zoom on hover */
 }
 
 h1 {
@@ -27,50 +31,35 @@ h1 {
   font-size: 28px;
 }
 
+p {
+  font-size: 16px;
+}
+
+/* Link boxes */
 .link-boxes {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 30px;
+  margin: 40px 20px;
   gap: 20px;
 }
 
 .box {
-  background: white;
-  border-radius: 10px;
-  padding: 20px;
-  width: 200px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  transition: transform 0.2s;
+  background: linear-gradient(145deg, #ffffff, #e0e0e0);
+  border-radius: 15px;
+  padding: 25px 20px;
+  width: 220px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .box:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.25);
 }
 
 .box a {
   text-decoration: none;
-  color: #333;
+  color: #2E7D32; /* match header gradient */
   font-weight: bold;
-  font-size: 18px;
-}
-
-.section {
-  margin-bottom: 30px;
-}
-
-.project, .service, .contact {
-  margin-bottom: 20px;
-}
-
-.back-link {
-  display: block;
-  margin-top: 20px;
-  text-align: center;
-}
-
-ul {
-  text-align: left;
-  display: inline-block;
-  margin: 0 auto;
-}
+  fon
