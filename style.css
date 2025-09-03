@@ -9,21 +9,8 @@ body {
 
 header {
   padding: 50px 20px;
-  background: linear-gradient(135deg, #4CAF50, #2E7D32); /* Gradient header */
+  background: linear-gradient(135deg, #4CAF50, #2E7D32);
   color: white;
-}
-
-.profile-pic {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  border: 5px solid white; /* lighter circle border */
-  object-fit: cover;
-  transition: transform 0.3s;
-}
-
-.profile-pic:hover {
-  transform: scale(1.05); /* subtle zoom on hover */
 }
 
 h1 {
@@ -35,7 +22,21 @@ p {
   font-size: 16px;
 }
 
-/* Link boxes */
+/* Profile picture */
+.profile-pic {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 5px solid white;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+}
+
+/* Homepage link boxes */
 .link-boxes {
   display: flex;
   flex-wrap: wrap;
@@ -60,11 +61,13 @@ p {
 
 .box a {
   text-decoration: none;
-  color: #2E7D32; /* match header gradient */
+  color: #2E7D32;
   font-weight: bold;
-  fon
+  font-size: 18px;
+  display: block;
+}
 
-/* Timeline style for experience */
+/* Timeline style for resume experience */
 .experience {
   background: #fff;
   border-left: 4px solid #4CAF50;
@@ -78,6 +81,7 @@ p {
 .experience h3 {
   margin-top: 0;
   color: #2E7D32;
+  cursor: pointer; /* combined cursor style here */
 }
 
 .experience p em {
@@ -97,20 +101,6 @@ p {
   border-radius: 50%;
 }
 
-@media (max-width: 600px) {
-  .experience {
-    border-left: 4px solid #4CAF50;
-    padding: 12px 15px;
-  }
-
-  .experience::before {
-    left: -9px;
-    top: 15px;
-    width: 10px;
-    height: 10px;
-  }
-}
-
 /* Collapsible job details */
 .experience p.details {
   display: none;
@@ -122,6 +112,38 @@ p {
   display: block;
 }
 
-.experience h3 {
-  cursor: pointer;
+/* Responsive design */
+@media (max-width: 600px) {
+  .link-boxes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box {
+    width: 80%;
+  }
+
+  .profile-pic {
+    width: 140px;
+    height: 140px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .box a {
+    font-size: 16px;
+  }
+
+  .experience {
+    padding: 12px 15px;
+  }
+
+  .experience::before {
+    left: -9px;
+    top: 15px;
+    width: 10px;
+    height: 10px;
+  }
 }
