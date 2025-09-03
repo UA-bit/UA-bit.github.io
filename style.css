@@ -110,3 +110,18 @@ p {
     height: 10px;
   }
 }
+
+/* Collapsible job details */
+.experience p.details {
+  display: none;
+  margin-top: 8px;
+  color: #333;
+}
+
+.experience.active p.details {
+  display: block;
+}
+
+.experience h3 {
+  cursor: pointer;
+}
