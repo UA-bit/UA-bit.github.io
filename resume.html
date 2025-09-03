@@ -3,84 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resume - Uriel Ambrosio</title>
+  <title>Resume</title>
   <link rel="stylesheet" href="style.css">
 </head>
-  
-<script>
-  const experiences = document.querySelectorAll('.experience h3');
-
-  experiences.forEach(job => {
-    job.addEventListener('click', () => {
-      job.parentElement.classList.toggle('active');
-    });
-  });
-</script>
-
 <body>
+  <header>
+    <h1>My Resume</h1>
+    <p>Click each job to expand details</p>
+  </header>
 
-<header>
-  <h1>Resume - Uriel Ambrosio</h1>
-</header>
+  <main style="max-width: 800px; margin: 40px auto; text-align: left;">
+    <div class="experience">
+      <h3>
+        <span class="arrow">▼</span> Software Engineer - TechCorp
+      </h3>
+      <p><em>Jan 2020 – Present</em></p>
+      <p class="details">Developed web applications, led a team of developers, and implemented modern software practices.</p>
+    </div>
 
-<section class="section">
-  <div class="section">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:urieltheambrosio@gmail.com">urieltheambrosio@gmail.com</a></p>
-    <p>Location: Naperville, Illinois, United States</p>
-  </div>
+    <div class="experience">
+      <h3>
+        <span class="arrow">▼</span> Web Developer - WebSolutions
+      </h3>
+      <p><em>2017 – 2019</em></p>
+      <p class="details">Built client websites, optimized SEO performance, and collaborated with designers.</p>
+    </div>
 
-<div class="section">
-  <h2>Experience</h2>
+    <div class="experience">
+      <h3>
+        <span class="arrow">▼</span> Junior Developer - StartUp Inc
+      </h3>
+      <p><em>2015 – 2017</em></p>
+      <p class="details">Worked on small projects, assisted senior developers, and learned full-stack development.</p>
+    </div>
+  </main>
 
-  <div class="experience">
-    <h3>Chasers Laser Tag – Management</h3>
-    <p><em>October 2020 - Present | Naperville, Illinois, United States</em></p>
-    <p class="details">Major duties include: Team Management, Arcade Machine Repairs, Laser Tag Equipment Repair, and R&D of Laser Tag/Arcade Accessories.</p>
-  </div>
+  <script>
+    document.querySelectorAll('.experience h3').forEach(h3 => {
+      h3.addEventListener('click', () => {
+        const parent = h3.parentElement;
+        const arrow = h3.querySelector('.arrow');
 
-  <div class="experience">
-    <h3>SMT GROUP LLC – Project Engineer</h3>
-    <p><em>August 2021 - January 2024 | Naperville, Illinois, United States</em></p>
-    <p class="details">
-      Manufacturing Process Engineer | Process Optimization | Quality Assurance | Cost Analysis.
-      Experienced in optimizing manufacturing processes to enhance efficiency, reduce costs, and ensure high product quality. Expertise in process design, development, and continuous improvement using Six Sigma and Lean Manufacturing. Collaborative team player with excellent communication skills.
-    </p>
-  </div>
+        parent.classList.toggle('active');
 
-  <div class="experience">
-    <h3>Mold Tooling Technician</h3>
-    <p><em>February 2019 - July 2021 | Naperville, Illinois</em></p>
-    <p class="details">Handled mold tooling, machine setup, and maintenance tasks.</p>
-  </div>
-
-  <div class="experience">
-    <h3>Dunkin Donuts – Shift Supervisor</h3>
-    <p><em>June 2018 - July 2023 | Naperville, Illinois</em></p>
-    <p class="details">Managed shift operations, staff scheduling, and customer satisfaction.</p>
-  </div>
-
-  <div class="experience">
-    <h3>SMT – Machine Operator</h3>
-    <p><em>August 2017 - May 2018 | Naperville, Illinois</em></p>
-  </div>
-
-  <div class="experience">
-    <h3>John and Eddies Pizza – Store Manager</h3>
-    <p><em>January 2015 - May 2017 | Downers Grove, Illinois</em></p>
-  </div>
-
-  <div class="experience">
-    <h3>Dunkin Donuts – Store Manager</h3>
-    <p><em>February 2010 - August 2014 | Wheaton, Illinois</em></p>
-  </div>
-</div>
-
-</section>
-
-<a class="back-link" href="index.html">← Back to Home</a>
-
+        // Toggle arrow rotation
+        if (parent.classList.contains('active')) {
+          arrow.textContent = '▲';
+        } else {
+          arrow.textContent = '▼';
+        }
+      });
+    });
+  </script>
 </body>
 </html>
-
-

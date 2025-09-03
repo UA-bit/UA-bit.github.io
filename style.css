@@ -147,3 +147,18 @@ p {
     height: 10px;
   }
 }
+
+/* Arrow indicator */
+.experience h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.experience .arrow {
+  font-size: 16px;
+  color: #2E7D32;
+  transition: transform 0.3s ease;
+}
