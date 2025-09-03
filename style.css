@@ -102,13 +102,13 @@ p {
 }
 
 /* Collapsible job details */
-.experience p.details {
+.experience .details {
   display: none;
   margin-top: 8px;
   color: #333;
 }
 
-.experience.active p.details {
+.experience.active .details {
   display: block;
 }
 
