@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Personal Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+      text-align: center;
+    }
+    header {
+      padding: 40px;
+      background: #222;
+      color: white;
+    }
+    .profile-pic {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 5px solid #4CAF50;
+      object-fit: cover;
+    }
+    h1 {
+      margin-top: 20px;
+      font-size: 28px;
+    }
+    .link-boxes {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 30px;
+      gap: 20px;
+    }
+    .box {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      width: 200px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .box:hover {
+      transform: translateY(-5px);
+    }
+    .box a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="profile.jpg" alt="My Profile Picture" class="profile-pic">
+    <h1>Hi, I'm [Your Name]</h1>
+    <p>Welcome to my personal website. Explore my projects, resume, and services!</p>
+  </header>
+
+  <section class="link-boxes">
+    <div class="box"><a href="resume.html">My Resume</a></div>
+    <div class="box"><a href="projects.html">Projects</a></div>
+    <div class="box"><a href="services.html">Services</a></div>
+    <div class="box"><a href="contact.html">Contact Me</a></div>
+  </section>
+
+</body>
+</html>
