@@ -63,3 +63,50 @@ p {
   color: #2E7D32; /* match header gradient */
   font-weight: bold;
   fon
+
+/* Timeline style for experience */
+.experience {
+  background: #fff;
+  border-left: 4px solid #4CAF50;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.experience h3 {
+  margin-top: 0;
+  color: #2E7D32;
+}
+
+.experience p em {
+  font-style: normal;
+  color: #555;
+  font-size: 0.9em;
+}
+
+.experience::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 20px;
+  width: 12px;
+  height: 12px;
+  background: #4CAF50;
+  border-radius: 50%;
+}
+
+@media (max-width: 600px) {
+  .experience {
+    border-left: 4px solid #4CAF50;
+    padding: 12px 15px;
+  }
+
+  .experience::before {
+    left: -9px;
+    top: 15px;
+    width: 10px;
+    height: 10px;
+  }
+}
