@@ -24,8 +24,8 @@ p {
 
 /* Profile picture */
 .profile-pic {
-  width: 180px;
-  height: 180px;
+  width: 360px;
+  height: 360px;
   border-radius: 50%;
   border: 5px solid white;
   object-fit: cover;
