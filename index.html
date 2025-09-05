@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Personal Page</title>
   <link rel="stylesheet" href="style.css">
-  <!-- Font Awesome for icons -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -16,38 +15,39 @@
     <p>Welcome to my website. Explore my projects, resume, and services!</p>
   </header>
 
-  <div id="navbar"></div>
-
-  <script>
-    fetch("navbar.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("navbar").innerHTML = data;
-      });
-  </script>
+  <!-- Navbar (same on every page) -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
   <section class="link-boxes">
     <div class="box">
       <a href="resume.html">
-        <i class="fas fa-file-alt" style="font-size: 36px; margin-bottom: 10px;"></i>
+        <i class="fas fa-file-alt"></i>
         My Resume
       </a>
     </div>
     <div class="box">
       <a href="projects.html">
-        <i class="fas fa-project-diagram" style="font-size: 36px; margin-bottom: 10px;"></i>
+        <i class="fas fa-project-diagram"></i>
         Projects
       </a>
     </div>
     <div class="box">
       <a href="services.html">
-        <i class="fas fa-briefcase" style="font-size: 36px; margin-bottom: 10px;"></i>
+        <i class="fas fa-briefcase"></i>
         Services
       </a>
     </div>
     <div class="box">
       <a href="contact.html">
-        <i class="fas fa-envelope" style="font-size: 36px; margin-bottom: 10px;"></i>
+        <i class="fas fa-envelope"></i>
         Contact Me
       </a>
     </div>
