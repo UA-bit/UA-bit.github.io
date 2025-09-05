@@ -11,10 +11,20 @@
 <body>
 
   <header>
-    <img src="profile.jpg" alt="My Profile Picture" class="profile-pic">
-    <h1>Hi, I'm [Your Name]</h1>
-    <p>Welcome to my personal website. Explore my projects, resume, and services!</p>
+    <img src="profile.png" alt="My Profile Picture" class="profile-pic">
+    <h1>Hi, I'm Uriel!</h1>
+    <p>Welcome to my website. Explore my projects, resume, and services!</p>
   </header>
+
+  <div id="navbar"></div>
+
+  <script>
+    fetch("navbar.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("navbar").innerHTML = data;
+      });
+  </script>
 
   <section class="link-boxes">
     <div class="box">
